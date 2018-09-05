@@ -1,0 +1,172 @@
+.bg-light {
+    background-color: #ffffff!important;
+}
+
+a.nav-link {
+    font-size: 1.2rem;
+}
+
+.card{
+    border: 0px;
+}
+
+.special-card {  
+      background-color: rgba(245, 245, 245, 1);
+      opacity: .8;
+}
+
+.d-inline-block{
+    margin-right: -30px;
+}
+
+.fondoPlanesServicio{
+    background-color:#5f5d5d;
+}
+
+.margenParrafo{
+    margin-left: 3rem; 
+}
+
+.flex-row{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.line-vertical{
+    border-left-width: 1rem;
+    border-left-color: rgb(90, 27, 27);
+}
+
+.color-icon-banner{
+    background-color: rgb(148, 4, 4);
+}
+
+.image-izquierda{
+    margin-left: -245px;
+}
+
+.colorFondoCerfac{
+    background-color: rgb(148, 4, 4);
+    border-color: rgb(148, 4, 4);   
+}
+
+.colorLetraCerfac{
+    color: rgb(148, 4, 4);
+}
+
+/*Propiedades por defecto para las propiedades generales para no escribir en cada propiedad de cada resolucion*/
+.propiedades_div
+{
+	background-size: 100% 100%;
+	height:100vh;
+	width:100vw;
+	
+}
+
+/* Css por defecto para los dispositivos mas pequeños*/
+.imagen
+{
+	background-image: url('../img/portada/landing.png');	
+}	
+/* Css por defecto para los dispositivos medianos */
+@media (min-width: 600px) {
+  .imagen {
+    background-image: url('../img/portada/landing.png');
+  }
+}
+
+/* Css por defecto para los dispositivos grandes */
+@media (min-width: 1000px) {
+  .imagen {
+    background-image: url('../img/portada/landing.png');
+  }
+}
+
+.propiedadesm_div
+{
+	/* Agrego una imagen de fondo y la coloco con la propiedad size 100 para visualizar todo en el espacio del bloque */
+	background-image:url('../img/quienesomos/valores1.png');
+	/*background-size: 100%;*/
+	/* EStablecer ancho y alto en dimensiones en proporcion a la parte visible de la pantalla que va dede 0 a 100 como porcentajes */	
+}
+
+.mascara
+{
+	
+	/*Establece la imagen que se va a usar de mascara */
+	-webkit-mask: url('../img/quienesomos/mascara.png');
+	/*Permite establecer todo el ancho y alto de la mascara*/
+	-webkit-mask-size:100% 100%;
+	/* Permite que la mascara este centrada */
+	-webkit-mask-position:center;
+	/*Permite que solo se muestre una vez la mascara y no como tapiz*/
+	-webkit-mask-repeat:no-repeat;	
+	/* Agrego adicional esta propiedad para que sea compatible con otros navegadores*/
+	mask-image: url('../img/quienesomos/mascara.png');
+	
+}
+
+.margenalto{
+    margin-top: 10rem;
+    margin-bottom: 10rem; 
+}
+
+.bg-light {
+    background-color: #ffffff!important;
+    opacity: .8;
+}
+
+/* Cambio los indicadores de carusel de lineas a circulos */
+.carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 3px solid white;
+    background-color: rgb(148, 4, 4);
+}
+
+.carousel-indicators .active {
+    background-color: #5f5d5d;
+}
+
+/*Espacio entre bloques*/
+.esp-bloq {
+    height: 5rem;
+}
+
+/*Fondo info arriendos*/
+.fond-bloq{
+    background-color:rgb(228, 228, 228);
+    padding-right: 0rem;
+    margin-left: -1rem;
+}
+
+.align-img-izq{
+    margin-right: -1rem
+}
+
+/*Filos redondos de jumbotron */
+.rounded {
+    border-radius: 1rem!important;
+}
+
+.jumbotron-style-1{
+    padding-bottom: 20px;
+}
+
+.jumbotron-style-2{
+    padding-bottom: 40px;
+}
+
+/*Tamaño de letra*/
+h3.font-size-1{
+    font-size: 1.2rem;
+}
+
+p.lead.font-size-2{
+    font-size: 1rem;
+}
+
+h4.font-size-3{
+    font-size: 1.8rem;
+}
