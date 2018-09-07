@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if error %}
+	    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="esp-bloq"></div>
+                <div class="esp-bloq"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid w-100">
+        <div class="row">
+        	<div class="col-md-4 offset-md-4  col-sm-8 offset-sm-2 col-10 offset-1 text-center">
+        		<form class="form-signin" action="{{ path('login') }}" method="post">
+                	<img class="mb-4" src="img/logo/logo.png" alt="logo">
+                	<h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
+                  
+                	<label for="username" class="sr-only">Usuario:</label>
+                	<input type="text"  id="username" name="_username" class="form-control" placeholder="Usuario" value="{{ last_username }}" required autofocus >
+                  
+                	<label for="inputPassword" class="sr-only">Password</label>
+                	<input type="password" id="password" name="_password" class="form-control" placeholder="Password" required>
+                  
+                	<input type="hidden" name="_target_path" value="{{ path('admin') }}" />
+                  
+                	<button class="btn btn-lg btn-secondary btn-block" type="submit">Ingresar</button>
+                  
+                  	<p class="mt-5 mb-3 text-muted">by Runa Sapiens</p>
+                </form>
+        	</div>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="esp-bloq"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
