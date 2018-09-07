@@ -1,25 +1,64 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="esp-bloq"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="esp-bloq"></div>
+            </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
     <div class="row">
-    	<div class="col-md-10 offset-md-1  col-sm-8 offset-sm-2 col-10 offset-1 text-center">
-        	Hola
-    	</div>   
+        <div class='col-8 offset-2 text-center'>	
+        	<h3> Listado de Departamentos</h3><br>
+            <h3 class='text-right'>
+        		<a class="btn btn-sm btn-primary" href="{{ path('departamento_nuevo')  }}" role="button"><em class="fa fa-plus"></em>&nbsp;Nuevo</a>
+        	</h3>
+        </div>
+        
+	</div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2  col-sm-8 offset-sm-2 col-10 offset-1">
+            <div class="table-responsive">
+        		<table class="table table-bordered table-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center" scope="col">#</th>
+                            <th class="text-center" scope="col">Nombre</th>
+                            <th class="text-center" scope="col">Ubicacion</th>
+                            <th class="text-center" scope="col">Descripcion</th>
+                            <th class="text-center" scope="col">Imagen</th>
+                            <th class="text-center" scope="col">Estado</th>
+                            <th class="text-center" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% set cont = 0 %}
+                    {% for departamento in departamentos %}
+                        <tr>
+                            <td class = "text-center"> {%  set cont = cont + 1 %} {{ cont }}</td>
+                            <td>{{ departamento.nombre }}</td>
+                            <td>{{ departamento.ubicacion }}</td>
+                            <td>{{ departamento.descripcion }}</td>                            
+                            <td>{{ departamento.imagen }}</td>
+                            <td>{{ departamento.estado }}</td>
+                            <td class = "text-center">
+                            	<a class="btn btn-sm btn-secondary" href="{{ path('departamento_editar', {'id': departamento.id })  }}" role="button"> <em class="fa fa-pencil-square-o"></em>&nbsp;Modificar </a>
+                            	<a class="btn btn-sm btn-danger" href="{{ path('departamento_eliminar', {'id': departamento.id }) }}" role="button"><em class="fa fa-trash"></em>&nbsp;Eliminar</a>
+                           	</td>
+                        </tr>
+                    {%  endfor %}
+                    </tbody>
+        		</table>
+        	</div>    	
+        </div>	
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="esp-bloq"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="esp-bloq"></div>
+                <div class="esp-bloq"></div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
